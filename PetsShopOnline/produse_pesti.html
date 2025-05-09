@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_cainiPage.css">
+</head>
+
+<body>
+     <!--Header-->
+    <header>
+        <img src="Images/logo.png" alt="Logo">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Cauta un produs aici">
+            <button>Search</button>
+        </div>
+        <div class="account-container">
+            <!-- Contul meu -->
+            <a href="#"><img src="Images/user.png" alt="My account"> Contul meu</a>
+            <!-- Favorite -->
+            <a href="#"><img src="Images/heart.png" alt="Favorite"> Favorite</a>
+            <!-- Butonul de coș -->
+            <a href="#" id="cart-button" onclick="toggleCart()">
+               <img src="Images/cart.png" alt="My cart"> Coșul meu (<span id="cart-count">0</span>)
+           </a>
+       </div>
+    </header>
+
+    <!-- Slider-ul  produselor -->
+    <div id="product-slider">
+        <div class="product-header">
+            <h2>Produse Disponibile</h2>
+            <button class="close-product" onclick="toggleProductSlider()">✖</button>
+        </div>
+        <div class="category-list">
+            <a href="produse_caini.html">🐶 Câini</a>
+            <a href="produse_pisici.html">🐱 Pisici</a>
+            <a href="produse_pasari.html">🐦 Păsări</a>
+            <a href="produse_pesti.html">🐟 Pești</a>
+            <a href="produse_rozatoare.html">🐭 Rozătoare</a>
+        </div>
+    </div>
+
+    <!-- Slider-ul coșului de cumpărături -->
+    <div id="cart-slider">
+        <div class="cart-header">
+            <h2>Coșul Meu</h2>
+            <button class="close-cart" onclick="toggleCart()">✖</button>
+        </div>
+        <div id="cart-items">
+            <p>Coșul tău de cumpărături este gol.</p>
+        </div>
+    </div>
+
+    <!--Nav-->
+    <nav class="category-bar">
+        <ul>
+            <li>
+                <a href="#" id="product-button" onclick="toggleProductSlider()">
+                    <img src="Images/menu.png" alt="Produse"> Produse
+                </a>
+            </li>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="#footer">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="img-caini">
+        <img src="Images/pesti_page.png" alt="Pagina produse pisici">
+    </div>
+
+    <!-- Categorii pasari -->
+    <section class="category-section">
+        <h2>Alege categoria preferată:</h2>
+        <div class="category-container">
+            <a href="hrana_pesti.html" class="category-item" data-category="Hrana">
+                <div class="circle"><img src="Images/hrana_pesti.png" alt="Hrana Pesti"></div>
+                <p>Hrana</p>
+            </a>
+            <a href="acvarii_pesti.html" class="category-item" data-category="Acvarii">
+                <div class="circle"><img src="Images/acvarii_pesti.png" alt="Acvarii Pesti"></div>
+                <p>Acvarii</p>
+            </a>
+            <a href="decoruri_pesti.html" class="category-item" data-category="Decoruri">
+                <div class="circle"><img src="Images/decoruri_pesti.png" alt="Decoruri Pesti"></div>
+                <p>Decoruri</p>
+            </a>
+            <a href="suplimente_pesti.html" class="category-item" data-category="Suplimente">
+                <div class="circle"><img src="Images/suplimente_pesti.png" alt="Suplimente Pesti"></div>
+                <p>Suplimente</p>
+            </a>
+        </div>
+    </section>
+        <!-- Produse -->
+    <section class="products-section">
+        <h2>Produse pentru pesti:</h2>
+        <div class="products-container" id="products-container"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="#">Acasă</a>
+                <a href="#">Contact</a>
+                <a href="#">Termeni și condiții</a>
+            </div>
+            <p>&copy; 2025 ANIMALS - Toate drepturile rezervate</p>
+            <div class="social-icons">
+                <a href="#"><img src="Images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="Images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="Images/youtube.png" alt="YouTube"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="products_pesti.js"></script>
+    <script src="filter_pesti.js"></script>
+    <script src="slider.js"></script>
+</body>
+
+</html>

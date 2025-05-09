@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_cainiPage.css">
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <img src="Images/logo.png">
+       
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Cauta un produs aici">
+            <button id="search-button">Search</button>
+        </div>
+        <div class="account-container">
+             <!-- Contul meu -->
+             <a href="#"><img src="Images/user.png" alt="My account"> Contul meu</a>
+             <!-- Favorite -->
+             <a href="#"><img src="Images/heart.png" alt="Favorite"> Favorite</a>
+             <!-- Butonul de coș -->
+             <a href="#" id="cart-button" onclick="toggleCart()">
+                <img src="Images/cart.png" alt="My cart"> Coșul meu (<span id="cart-count">0</span>)
+            </a>
+        </div>
+    </header>
+
+    <!-- Slider-ul  produselor -->
+    <div id="product-slider">
+        <div class="product-header">
+            <h2>Produse Disponibile</h2>
+            <button class="close-product" onclick="toggleProductSlider()">✖</button>
+        </div>
+        <div class="category-list">
+            <a href="produse_caini.html">🐶 Câini</a>
+            <a href="produse_pisici.html">🐱 Pisici</a>
+            <a href="produse_pasari.html">🐦 Păsări</a>
+            <a href="produse_pesti.html">🐟 Pești</a>
+            <a href="produse_rozatoare.html">🐭 Rozătoare</a>
+        </div>
+    </div>
+
+    <!-- Slider-ul coșului de cumpărături -->
+    <div id="cart-slider">
+        <div class="cart-header">
+            <h2>Coșul Meu</h2>
+            <button class="close-cart" onclick="toggleCart()">✖</button>
+        </div>
+        <div id="cart-items">
+            <p>Coșul tău de cumpărături este gol.</p>
+        </div>
+    </div>
+
+    <!--Nav-->
+    <nav class="category-bar">
+        <ul>
+            <li>
+                <a href="#" id="product-button" onclick="toggleProductSlider()">
+                    <img src="Images/menu.png" alt="Produse"> Produse
+                </a>
+            </li>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="#footer">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="img-caini">
+        <img src="Images/pisici_page.png" alt="Pagina produse pisici">
+    </div>
+
+    <!-- Categorii pisici -->
+    <section class="category-section">
+        <h2>Alege categoria preferată:</h2>
+        <div class="category-container">
+            <a href="hrana_pisici.html" class="category-item" data-category="Hrana">
+                <div class="circle"><img src="Images/hrana_pisici.png" alt="Hrana pisici"></div>
+                <p>Hrana</p>
+            </a>
+            <a href="recompnese_pisici.html" class="category-item" data-category="Recompense">
+                <div class="circle"><img src="Images/recompense_pisici.png" alt="Recompense Pisici"></div>
+                <p>Recompense</p>
+            </a>
+            <a href="suplimente_pisici.html" class="category-item" data-category="Suplimente">
+                <div class="circle"><img src="Images/suplimente_pisici.png" alt="Suplimente pisici"></div>
+                <p>Suplimente</p>
+            </a>
+            <a href="jucarii_pisici.html" class="category-item" data-category="Jucarii">
+                <div class="circle"><img src="Images/jucarii_pisici.png" alt="Jucarii pisici"></div>
+                <p>Jucării</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Produse -->
+    <section class="products-section">
+        <h2>Produse pentru pisici:</h2>
+        <div class="products-container" id="products-container"></div>
+    </section>
+
+     <!-- Descriere -->
+     <section class="content-section">
+        <h2>Pisici</h2>
+        <p>La petshopul online <b>Animax</b>, ne preocupăm de sănătatea, fericirea și confortul pisicilor tale. 
+            Avem o gamă diversificată de produse, alese cu grijă pentru a satisface nevoile și preferințele fiecărei pisici. 
+            Indiferent dacă este vorba despre hrană, accesorii, sau produse de igienă, suntem aici pentru a-ți oferi cele mai bune opțiuni pentru îngrijirea și bunăstarea pisicii tale.</p>
+        <h2>O dietă echilibrată pentru sănătatea pisicii tale</h2>
+        <p>Hrana este esențială pentru sănătatea și vitalitatea pisicii tale. La categoria de hrana pentru pisici, găsești opțiuni de hrană umedă, cât și uscată, care satisfac diversele nevoi nutriționale ale animalului tău de companie. Hrana uscată este o opțiune convenabilă și economică, fiind bogată în nutrienți esențiali și contribuind la menținerea sănătății orale a pisicii tale. Pe de altă parte,hrana umedă este apreciată pentru conținutul ridicat de apă, care contribuie la hidratarea optimă a pisicii. Indiferent de preferințele și necesitățile pisicii tale, este important să alegi hrana potrivită pentru a-i asigura o dietă echilibrată și sănătoasă.</p>
+        <h2>Răsfăță pisica ta cu gustări și suplimente nutritive</h2>
+        <p>Recompensele pentru pisică și suplimentele sunt o modalitate excelentă de a-ți răsfăța pisica și de a-i oferi beneficii suplimentare pentru sănătatea și bunăstarea ei. Acestea pot fi folosite ca recompense pentru comportamentul bun, pentru a încuraja interacțiunea pozitivă sau pur și simplu pentru a-i oferi un mic răsfăț. Suplimentele, pe de altă parte, pot fi utilizate pentru a susține sănătatea generală a pisicii, inclusiv pentru a îmbunătăți starea pielii și a blănii, pentru a sprijini funcția sistemului imunitar sau pentru a promova sănătatea articulațiilor. Indiferent de necesitățile specifice ale pisicii tale, recompensele și suplimentele pot fi o completare valoroasă a dietei și rutinei sale zilnice.</p>
+         <h2>Oază de odihnă și siguranță pentru pisica ta</h2>
+         <p>Un loc de odihnă confortabil este esențial pentru ca pisica ta să se simtă în siguranță și relaxată. La categoria de culcusuri și custipentru pisici, găsești o varietate de opțiuni concepute pentru a-i oferi pisicii tale un loc de relaxare confortabil și sigur. Culcusurile moi și pufoase sunt ideale pentru somn și odihnă, în timp ce custileoferă un spațiu sigur și protejat pentru pisică atunci când este necesar să călătorească sau să se odihnească în exterior. Indiferent de preferințele și nevoile pisicii tale, este important să alegi un culcuș sau o cuști care să ofere confort și siguranță pentru animalul tău de companie.</p>
+         <h2>Joacă și exercițiu pentru pisica ta</h2>
+         <p>Joaca este esențială pentru stimularea fizică și mentală a pisicii tale. La categoria de jucării pentru pisici, găsești o gamă variată de opțiuni distractive și captivante, concepute pentru a-ți ajuta pisica să-și exprime instinctele naturale de vânătoare și joacă. De la mingi și șoricei până la tuneluri și jucării interactive, există o mulțime de alegeri care să-i ofere pisicii tale ore întregi de distracție și bucurie.</p>
+        <h2>Plimbări sigure și confortabile în aer liber</h2>
+        <p>Ieșirile în aer liber pot fi o experiență minunată pentru pisica ta, dar este esențial să ai echipamentul potrivit pentru a o menține în siguranță și sub control. La categoria delese, hamuri și zgarzi pentru pisici, găsești o varietate de produse concepute pentru a asigura confortul și siguranța pisicii tale în timpul plimbărilor și aventurilor în aer liber. Hamurile și lesele pot fi reglabile și moi, asigurând un confort optim pentru pisica ta, în timp ce zgărzile pentru pisici sunt durabile și rezistente, menținându-și siguranța chiar și în cele mai agitate momente.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="#">Acasă</a>
+                <a href="#">Contact</a>
+                <a href="#">Termeni și condiții</a>
+            </div>
+            <p>&copy; 2025 ANIMALS - Toate drepturile rezervate</p>
+            <div class="social-icons">
+                <a href="#"><img src="Images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="Images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="Images/youtube.png" alt="YouTube"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            window.toggleCart = function() {
+                document.getElementById("cart-slider").classList.toggle("active");
+            };
+        });
+    </script>
+    <!-- Scripturi JavaScript -->
+    <script src="products_pisici.js"></script>
+    <script src="filter_pisici.js"></script>
+    <script src="slider.js"></script>
+</body>
+</html>

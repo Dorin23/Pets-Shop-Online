@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Animals App</h1>
+
+        <h2>Add New Product</h2>
+        <div class="section">
+            <input type="text" id="productName" placeholder="Product Name">
+            <input type="text" id="productDescription" placeholder="Product Description">
+            <input type="number" id="productPrice" placeholder="Product Price" step="0.01">
+            <input type="number" id="productQuantity" placeholder="Product Quantity">
+            <input type="number" id="productCategoryId" placeholder="Product Category ID">
+            <label for="productImage">URL Imagine:</label>
+            <input type="text" id="productImage" placeholder="/numeImagine.png">
+            <!-- FĂRĂ onclick aici -->
+            <button id="addProductButton">Add Product</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Rename Product</h2>
+        <div class="form-group">
+            <input type="number" id="productIdToUpdate" placeholder="Product ID to Update">
+            <input type="text" id="newProductName" placeholder="New Product Name">
+            <input type="text" id="newProductDescription" placeholder="New Product Description">
+            <input type="number" id="newProductPrice" placeholder="New Product Price" step="0.01">
+            <input type="number" id="newProductQuantity" placeholder="New Product Quantity">
+            <input type="number" id="newProductCategoryId" placeholder="New Product Category ID">
+            <label for="newProductImage">New URL Imagine:</label>
+            <input type="text" id="newProductImage" placeholder="/numeImagine.png">
+            <button id="renameProductButton">Rename Product</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Delete Product</h2>
+        <div class="form-group">
+            <input type="number" id="productIdToDelete" placeholder="Enter Product ID to Delete">
+            <button id="deleteProductButton">Delete Product</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>All Products</h2>
+        <button id="showAllProductsButton">Show All Products</button>
+        <ul id="productList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_cainiPage.css">
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <img src="Images/logo.png">
+
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Cauta un produs aici">
+            <button id="search-button">Search</button>
+        </div>
+
+        <div class="account-container">
+            <!-- Contul meu -->
+            <a href="#"><img src="Images/user.png" alt="My account"> Contul meu</a>
+            <!-- Favorite -->
+            <a href="#"><img src="Images/heart.png" alt="Favorite"> Favorite</a>
+            <!-- Butonul de coș -->
+            <a href="#" id="cart-button" onclick="toggleCart()">
+                <img src="Images/cart.png" alt="My cart"> Coșul meu (<span id="cart-count">0</span>)
+            </a>
+        </div>
+    </header>
+
+     <!-- Slider-ul  produselor -->
+     <div id="product-slider">
+        <div class="product-header">
+            <h2>Produse Disponibile</h2>
+            <button class="close-product" onclick="toggleProductSlider()">✖</button>
+        </div>
+        <div class="category-list">
+            <a href="produse_caini.html">🐶 Câini</a>
+            <a href="produse_pisici.html">🐱 Pisici</a>
+            <a href="produse_pasari.html">🐦 Păsări</a>
+            <a href="produse_pesti.html">🐟 Pești</a>
+            <a href="produse_rozatoare.html">🐭 Rozătoare</a>
+        </div>
+    </div>
+
+    <!-- Slider-ul coșului de cumpărături -->
+    <div id="cart-slider">
+        <div class="cart-header">
+            <h2>Coșul Meu</h2>
+            <button class="close-cart" onclick="toggleCart()">✖</button>
+        </div>
+        <div id="cart-items">
+            <p>Coșul tău de cumpărături este gol.</p>
+        </div>
+    </div>
+
+    <!--Nav-->
+    <nav class="category-bar">
+        <ul>
+            <li>
+                <a href="#" id="product-button" onclick="toggleProductSlider()">
+                    <img src="Images/menu.png" alt="Produse"> Produse
+                </a>
+            </li>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="#footer">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="img-caini">
+        <img src="Images/caini_page.png" alt="Pagina produse caini">
+    </div>
+
+    <!-- Caini -->
+    <section class="category-section">
+        <h2>Alege categoria preferată:</h2>
+        <div class="category-container">
+            <!-- Hrana -->
+            <a href="hrana_caini.html" class="category-item" data-category="Hrana">
+                <div class="circle"><img src="Images/hrana_caini.png" alt="Hrana caini"></div>
+                <p>Hrana</p>
+            </a>
+            <!-- Recompense -->
+            <a href="recompnese_caini.html" class="category-item" data-category="Recompense">
+                <div class="circle"><img src="Images/recompense_caini.png" alt="Recompense Caini"></div>
+                <p>Recompense</p>
+            </a>
+            <!-- Suplimente -->
+            <a href="suplimente_caini.html" class="category-item" data-category="Suplimente">
+                <div class="circle"><img src="Images/suplimente_caini.png" alt="Suplimente caini"></div>
+                <p>Suplimente</p>
+            </a>
+            <!-- Jucarii -->
+            <a href="jucarii_caini.html" class="category-item" data-category="Jucarii">
+                <div class="circle"><img src="Images/jucarii_caini.png" alt="Jucarii caini"></div>
+                <p>Jucarii</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Produse -->
+    <section class="products-section">
+        <h2>Produse pentru câini:</h2>
+        <div class="products-container" id="products-container"></div>
+    </section>
+
+    <!-- Descriere -->
+    <section class="content-section">
+        <h2>Caini</h2>
+        <p>Cu dragoste pentru prietenul tău blănos! La <b>Animals</b>, pet shop-ul nostru online, 
+            suntem dedicați să îți oferim cele mai bune produse pentru câinele tău indiferent dacă este vorba de mâncare câini,
+            recompense câini, vitamine și suplimente sau cuști câini, pentru a-i asigura o viață fericită și sănătoasă. Descoperă o gamă largă 
+            de produse în categoria noastră de câini, pentru a satisface toate nevoile și dorințele patrupedului tău.</p>
+        <h2>Hrana pentru câini</h2>
+        <p>Înțelegem cât de importantă este hrana pentru sănătatea și fericirea câinelui tău.
+             De aceea, ne străduim să-ți oferim cea mai bună selecție de mâncare câini.
+             De la hrana uscată pentru câini și hrana umedă până la recompensele delicioase și suplimentele nutritive, găsești tot ce ai nevoie pentru a-i asigura câinelui tău o dietă echilibrată și hrănitoare. Nu trebuie să-ți faci griji, suntem aici pentru a 
+            te ghida în găsirea combinației perfecte de hrănire pentru prietenul tău canin.</p>
+        <h2>Accesorii pentru hrănire și adăpare</h2>
+        <p>Asigură-te că patrupedul tău primește tot ce are nevoie pentru a se hrăni și hidrata în mod corespunzător cu gama noastră de hrănitoare,adaptoare,castroane și dozatoare de mâncare pentru câini. Cu aceste accesorii practice, vei avea certitudinea
+         că patrupedul tău va avea întotdeauna acces la apă și mâncare proaspătă.</p>
+         <h2>Îngrijire câini și suplimente nutritive</h2>
+         <p>Menținerea sănătății și aspectului câinelui tău este o prioritate, de aceea oferim o gamă completă de produse de îngrijire, inclusiv șampoane câini, perii, suplimente și chiar produse pentru îngrijirea dentară. Cu aceste produse de înaltă calitate, vei putea menține blana strălucitoare și pielea sănătoasă a câinelui tău, în timp
+             ce te asiguri că primește tot ceea ce are nevoie pentru a fi fericit și sănătos.
+         </p>
+         <h2>Jucării și haine adorabile</h2>
+         <p>Pentru a adăuga un element de distracție și stil în viața câinelui tău, descoperă o varietate de jucării pentru căței interactive și o gamă variată de haine pentru cățeluși adorabile în magazinul nostru online. De la mingi de cauciuc durabile până la haine trendy precum pelerine de ploaie și încălțăminte câini, vei găsi tot ce ai
+             nevoie pentru a-ți răsfăța și a-ți bucura patrupedul.</p>
+        <h2>Plimbare câini și soluții pentru igienă</h2>
+        <p>Asigură-te că patrupedul tău are tot ce are nevoie pentru a rămâne curat și confortabil cu gama noastră de lesă,hamuri,zgarzi,botnițe pentru câini și soluții de curățare. Cu aceste accesorii esențiale, vei putea menține câinele tău curat și îngrijit, indiferent de aventurile pe care le întâmpină</p>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="#">Acasă</a>
+                <a href="#">Contact</a>
+                <a href="#">Termeni și condiții</a>
+            </div>
+            <p>&copy; 2025 ANIMALS - Toate drepturile rezervate</p>
+            <div class="social-icons">
+                <a href="#"><img src="Images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="Images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="Images/youtube.png" alt="YouTube"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            window.toggleCart = function() {
+                document.getElementById("cart-slider").classList.toggle("active");
+            };
+        });
+    </script>
+    <script src="products.js"></script>
+    <script src="filter.js"></script>
+    <script src="slider.js"></script>
+</body>
+</html>

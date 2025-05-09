@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librarie Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Header -->
+    <header>
+        <img src="Images/logo.png">
+
+        <div class="search-container">
+        <input type="text" placeholder="Cauta un produs aici">
+        <button>Search</button>
+        </div>
+
+        <div class="account-container">
+        <a href="#"><img src="Images/user.png" alt="My account"> Contul meu</a>
+        <a href="#"><img src="Images/heart.png" alt="Favorite"> Favorite</a>
+        <a href="#" id="cart-button" onclick="toggleCart()">
+            <img src="Images/cart.png" alt="My cart"> Coșul meu (<span id="cart-count">0</span>)
+        </a>
+        </div>
+
+    </header>
+    <!--Nav-->
+    <nav class="category-bar">
+        <ul>
+        <li>
+            <a href="#" id="product-button" onclick="toggleProductSlider()">
+                <img src="Images/menu.png" alt="Produse"> Produse
+            </a>
+        </li>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="#footer">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Slider-ul coșului de cumpărături -->
+    <div id="cart-slider">
+        <div class="cart-header">
+            <h2>Coșul Meu</h2>
+            <button class="close-cart" onclick="toggleCart()">✖</button>
+        </div>
+        <div id="cart-items">
+            <p>Coșul tău de cumpărături este gol.</p>
+        </div>
+    </div>
+    
+    <!-- Slider-ul  produselor -->
+    <div id="product-slider">
+        <div class="product-header">
+            <h2>Produse Disponibile</h2>
+            <button class="close-product" onclick="toggleProductSlider()">✖</button>
+        </div>
+        <div class="category-list">
+            <a href="produse_caini.html">🐶 Câini</a>
+            <a href="produse_pisici.html">🐱 Pisici</a>
+            <a href="produse_pasari.html">🐦 Păsări</a>
+            <a href="produse_pesti.html">🐟 Pești</a>
+            <a href="produse_rozatoare.html">🐭 Rozătoare</a>
+        </div>
+    </div>
+
+    
+<!-- Carusel -->
+    <div class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="Images/slide1.png" alt="Oferta 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="Images/slide2.png" alt="Oferta 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="Images/slide3.png" alt="Oferta 3">
+            </div>
+            <div class="carousel-slide">
+                <img src="Images/slide4.png" alt="Oferta 4">
+            </div>
+        </div>
+        <!-- Butoane pentru navigare -->
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <!--categorii Animale -->
+     <section class="category-section">
+     <h2>Cumpara pentru:</h2>
+     <div class="category-container">
+      <!-- Caini -->
+     <a href="produse_caini.html" class="category-item">
+       <div class="circle"><img src="Images/caini.png" alt="Caini"></div>
+        <p>Caini</p>
+     </a>
+      <!-- Pisici -->
+      <a href="produse_pisici.html" class="category-item">
+        <div class="circle"><img src="Images/pisici.png" alt="Pisici"></div>
+         <p>Pisici</p>
+      </a>
+       <!-- Pasari -->
+       <a href="produse_pasari.html" class="category-item">
+        <div class="circle"><img src="Images/pasari.png" alt="Pasari"></div>
+         <p>Pasari</p>
+      </a>
+       <!-- Pesti -->
+       <a href="produse_pesti.html" class="category-item">
+        <div class="circle"><img src="Images/pesti.png" alt="Pesti"></div>
+         <p>Pesti</p>
+      </a>
+      <!-- Rozatoare -->
+      <a href="produse_rozatoare.html" class="category-item">
+        <div class="circle"><img src="Images/rozatoare.png" alt="Rozatoare"></div>
+         <p>Rozatoare</p>
+      </a>
+    </div>
+</section>
+
+<footer id="footer">
+    <div class="footer-container">
+        <div class="footer-links">
+            <a href="index.html">Acasă</a>
+            <a href="#">Contact</a>
+            <a href="#">Termeni și condiții</a>
+        </div>
+        <p>&copy; 2025 ANIMALS - Toate drepturile rezervate</p>
+        <div class="social-icons">
+            <a href="#"><img src="Images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="Images/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="Images/youtube.png" alt="YouTube"></a>
+        </div>
+    </div>
+</footer>
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>
